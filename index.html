@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#333333">
 <title>My Resume</title>
 <style>
 
@@ -103,6 +107,19 @@
  
 </div>
  
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+        navigator.serviceWorker.register("service-worker.js")
+            .then(function () {
+                console.log("PWA Service Worker registered successfully.");
+            })
+            .catch(function (error) {
+                console.error("Service Worker registration failed:", error);
+            });
+    });
+}
+</script>
 </body>
 </html>
  

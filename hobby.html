@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#333333">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phu Phu - My Hobbies</title>
@@ -11,7 +14,7 @@
 
 <header>
     <h1>Phu Phu's Hobbies</h1>
-    <p><a href="resume.html">View My Resume</a></p>
+    <p><a href="index.html">View My Resume</a></p>
 </header>
 
 <hr>
@@ -93,5 +96,12 @@
     <p><em>"Never stop learning because life never stops teaching."</em></p>
 </footer>
 
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+        navigator.serviceWorker.register("service-worker.js");
+    });
+}
+</script>
 </body>
 </html>
