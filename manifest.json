@@ -1,0 +1,11 @@
+{
+  "name": "Phu Phu Personal Website",
+  "short_name": "Phu Phu",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#fff0f5",
+  "theme_color": "#ff69b4",
+  "description": "Personal resume, hobbies and calculator website.",
+  "chatgpt_share_url": "https://chatgpt.com/share/6a8585a9-8428-83ec-ae68-d71207959f7e",
+  "icons": []
+}
