@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Grade Calculator</h1><nav>
+<a href="index.html">Resume</a>
+<a href="hobby.html">Hobbies</a>
+<a href="grading.html">Grade Calculator</a>
+<a href="convertor.html">Measurement Converter</a>
+<a href="change.html">Change Calculator</a>
+<a href="distance.html">Distance Calculator</a>
+</nav></header>
+<div class="container">
+
+<h2>Grade Calculator</h2>
+<label>Student Name</label>
+<input type="text" id="name" placeholder="Enter your name">
+<label>Score</label>
+<input type="number" id="score" placeholder="Enter your score">
+<button onclick="calculateGrade()">Submit</button>
+<p id="result" class="result"></p>
+<script>
+function calculateGrade(){
+ let name=document.getElementById("name").value.trim();
+ let score=document.getElementById("score").value;
+ if(name===""){alert("Please enter your name.");return}
+ if(score===""){alert("Please enter your score.");return}
+ score=parseInt(score);
+ if(score<0||score>100){alert("Score must be between 0 and 100.");return}
+ let grade=score>=80?"A":score>=70?"B":score>=60?"C":score>=50?"D":"F";
+ document.getElementById("result").innerHTML=name+"'s Grade : "+grade;
+}
+</script>
+
+<p><a class="back-button" href="index.html">← Back to Resume</a></p>
+</div>
+</body></html>

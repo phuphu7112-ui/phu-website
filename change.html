@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Change Calculator</h1><nav>
+<a href="index.html">Resume</a>
+<a href="hobby.html">Hobbies</a>
+<a href="grading.html">Grade Calculator</a>
+<a href="convertor.html">Measurement Converter</a>
+<a href="change.html">Change Calculator</a>
+<a href="distance.html">Distance Calculator</a>
+</nav></header>
+<div class="container">
+
+<h2>Change Calculator</h2>
+<input type="number" id="amount" placeholder="Enter amount">
+<button onclick="calculateChange()">Calculate</button>
+<div id="result" class="result"></div>
+<script>
+function calculateChange(){
+ let amount=document.getElementById("amount").value;
+ if(amount===""){alert("Please enter amount.");return}
+ amount=parseInt(amount);
+ if(amount<0){alert("Invalid amount.");return}
+ let money=[1000,500,100,50,20,10,5,2,1],result="";
+ for(let i=0;i<money.length;i++){
+  let count=Math.floor(amount/money[i]);
+  result+="$"+money[i]+(money[i]>=20?" note : ":" coin : ")+count+"<br>";
+  amount=amount%money[i];
+ }
+ document.getElementById("result").innerHTML=result;
+}
+</script>
+
+<p><a class="back-button" href="index.html">← Back to Resume</a></p>
+</div>
+</body></html>
